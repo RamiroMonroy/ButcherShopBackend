@@ -25,10 +25,11 @@ public class Customer implements Serializable{
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Integer id;
-	    private String nombre;
-	    private String apellido;
+	    private String name;
+	    private String lastname;
 	    private String email;
-	    private String direccion;
-	    private String telefono;
+	    private String address;
+	    private String telephone;
+	    private String password;
 
 	}
