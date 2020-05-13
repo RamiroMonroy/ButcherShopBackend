@@ -22,15 +22,17 @@ import co.com.udea.entity.Customer;
 import co.com.udea.service.CustomerService;
 
 @RestController
-@RequestMapping(value="v1/costumers")
+@RequestMapping(value="/v1/costumers")
 
 @Validated
 public class CustomerController {
 
-	@Autowired
+	
 	private CustomerService customerService;
 	
-	
+	public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
 	@GetMapping( value = "/")
 	public ResponseEntity<List<CustomerDto>> findAll() {
