@@ -56,5 +56,11 @@ public class CustomerService {
         Customer findCustomer = findCustomerOptional.orElseThrow(EntityNotFoundException::new);
         return modelMapper.map(findCustomer, CustomerDto.class);
     }
+    
+    public void delete(Integer id) {
+        CustomerDto customerInDb = findById(id);
+        Customer customerToDelete = modelMapper.map(customerInDb, Customer.class);
+        customerRepository.delete(customerToDelete);
+    }
 	
 }
