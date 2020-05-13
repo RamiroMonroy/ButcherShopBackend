@@ -22,7 +22,7 @@ import co.com.udea.entity.Customer;
 import co.com.udea.service.CustomerService;
 
 @RestController
-@RequestMapping(value="/v1/costumers")
+@RequestMapping(value="/v1/customers")
 
 @Validated
 public class CustomerController {
