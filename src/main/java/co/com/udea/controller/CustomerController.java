@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.udea.service.CustomerService;
-import entity.Customer;
+import co.com.udea.entity.Customer;
 
 @RestController
 @RequestMapping(value = "/customers")
